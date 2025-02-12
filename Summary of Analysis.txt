@@ -1,0 +1,40 @@
+Summary of Analysis:
+Library Installations & Imports:
+
+The notebook installs and imports necessary libraries such as pandas, numpy, matplotlib, and seaborn.
+Data Loading & Basic Information:
+
+The dataset is loaded using pandas.read_csv().
+df.info() is used to check data types and missing values.
+df.describe() provides statistical summaries of numerical columns.
+Data Cleaning & Preprocessing:
+
+The "TotalCharges" column had blank values replaced with 0 and converted to float.
+Checked for missing values (df.isnull().sum()) and found none after handling blanks.
+Duplicate Records: Checked for duplicate customer IDs, but none were found.
+Senior Citizen Encoding: Converted 0 and 1 values into No and Yes for better readability.
+Churn Distribution:
+
+Used sns.countplot() to visualize the churn distribution.
+Observation: More customers are in the "No Churn" category, meaning most users do not leave.
+Feature Analysis:
+
+Demographic Features:
+Senior citizens have a different churn behavior than non-seniors.
+Gender does not significantly impact churn.
+Service Features:
+Customers without additional services (like Online Security, Backup, and Tech Support) are more likely to churn.
+Fiber optic internet users have higher churn rates than DSL users.
+Contract Type & Churn:
+Customers on monthly contracts have a much higher churn rate than those on yearly contracts.
+Payment Methods:
+Customers using electronic check payments tend to churn more compared to those using credit card or bank transfers.
+Correlation Analysis:
+
+A heatmap (sns.heatmap(df.corr())) was likely used to check feature relationships.
+Monthly charges show a positive correlation with churn.
+Key Insights:
+Customers on monthly contracts, fiber optic internet, and electronic check payments have higher churn rates.
+Customers with additional services (Online Security, Backup, Tech Support) tend to stay longer.
+Demographics (age, gender) do not strongly impact churn.
+High monthly charges contribute to customer churn.
